@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RDF test</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="src/css/app.css" rel="stylesheet">
+
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+    <script type="text/javascript" src="node_modules/truffle-contract/dist/truffle-contract.min.js"></script>
+
+    <style>
+      #options{
+          height: 40px;
+          width: 90%;
+          font-size: 1.2em;
+      }
+      #selecttag{
+          font-size: 1.7em;
+      }
+      #submit{
+        width: 20%;
+        display: block;
+        margin: 20px auto;
+      }
+      .select, .send, #all-accounts{
+          display: none;
+      }
+      .active{
+          display: block !important;
+      }
+    </style>
+
+  </head>
+  <body>  
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="select active">
+              <h1>RDF</h1>
+              <h2>Test Truffle DApp</h2>
+              <br>
+              <h3 id="selecttag">Enter the address of the smart contract</h3>
+              <input type="text" id='options'>
+              <button id="submit" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+
+
+        <div class="col-md-10 col-md-offset-1">
+          <div class="send" style="border-bottom: 1px solid black; padding-bottom: 10px;">
+              <h1>RDF</h1>
+              <h2>Test Truffle Dapp</h2>
+              <h3>Address smart contract: <span class="black" id="account" style="color:green;"></span></h3>
+              <!-- <h3>Query smart contract: <span class="black" id="query" style="color:green;"></span></h3> -->
+              <h3>Number of triplets: <span class="black" id="number" style="color:green;"></span></h3>
+              <h3>Hash: <span class="black" id="hash" style="color:green;"></span></h3>
+              <br>
+              <!-- <div style="display: flex; justify-content: flex-end;">
+                <button id="refresh_data" class="btn btn-primary">REFRESH</button>
+              </div> -->
+
+
+              
+
+
+
+
+              <!-- <h1>Result:</h1>
+              <div><p id="result"></p></div>
+              <br>
+              <div class="col-md-4 col-md-offset-4">
+                <button class="btn btn-primary" id="refresh">Refresh</button>
+              </div>
+              <br>
+              <input type="text" id='index'>
+              <button class="btn btn-primary" id="send">send</button>
+              <h1>Index:</h1>
+              <div><p id="text_index"></p></div> -->
+          </div>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <div class="send" style="border-bottom: 1px solid black; padding-bottom: 20px;">
+            <h3 id="selecttag">Add triplet</h3>
+            <div style="display:flex; flex-direction: row;">
+              <p style="font-size: 19px; margin-right: 10px;">Enter the index of triplet:</p>
+              <input type="text" id='index' style="width: 200px;">
+              <button id="send" class="btn btn-primary" style="margin-left: 10px;">SUBMIT</button>
+            </div>
+            <!-- <h3 id="selecttag">Enter the index of triplet</h3>
+            <input type="text" id='index' style="display:inline-block;">
+            <button id="send" class="btn btn-primary" style="display:inline-block;">SUBMIT</button> -->
+            <!-- <h3 id="selecttag">Result: </h3>
+            <div><p id="text_index"></p></div> -->
+          </div>
+        </div>
+
+         <div class="col-md-10 col-md-offset-1">
+          <div class="send" style="border-bottom: 1px solid black; padding-bottom: 20px;">
+            <h3 id="selecttag">Print triplet by index</h3>
+            <div style="display:flex; flex-direction: row;">
+              <p style="font-size: 19px; margin-right: 10px;">Enter the index of triplet:</p>
+              <input type="text" id='index2' style="width: 200px;">
+              <button id="triple_by_index" class="btn btn-primary" style="margin-left: 10px;">SUBMIT</button>
+            </div>
+            <div style="display:flex; flex-direction: row;">
+              <h3 id="selecttag">Result: </h3>
+              <p id="triplet_index" style="color:green; margin-top: 23px; margin-left: 10px;"></p>
+            </div>
+            
+          </div>
+        </div>
+
+
+        <div class="col-md-10 col-md-offset-1">
+                <div class="send">
+                  <h3 id="selecttag">Print all graf</h3>
+                  <!-- <button id="refresh" class="btn btn-primary">SUBMIT</button> -->
+                  <button id="all" class="btn btn-primary">PRINT</button>
+                  <h3 id="selecttag">Result: </h3>
+                  <div id="resultAll"></div>
+                </div>
+        </div>
+
+       
+
+
+      </div>
+    </div>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="src/app.js"></script>
+    <script type="text/javascript" src="src/utils.js"></script>
+    <!-- <script type="text/javascript" src="src/index.js"></script> -->
+  </body>
+</html>

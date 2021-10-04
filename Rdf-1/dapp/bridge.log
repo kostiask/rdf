@@ -1,0 +1,514 @@
+{"defaultnode":"http://localhost:7545","HOST":"localhost:7545","account":"9","gas":3700000,"confirmation":12,"disable-deterministic-oar":false,"loglevel":"info","non-interactive":false,"enable-stats":false,"no-hints":false,"gasprice":20000000000,"logFilePath":"./bridge.log","confirmations":12,"defaultGas":3700000,"level":"debug","message":"parsed options","timestamp":"2021-08-28T23:27:38.911Z"}
+{"level":"info","message":"you are running ethereum-bridge - version: 0.6.2","timestamp":"2021-08-28T23:27:38.913Z"}
+{"level":"info","message":"saving logs to: ./bridge.log","timestamp":"2021-08-28T23:27:38.914Z"}
+{"level":"info","message":"using active mode","timestamp":"2021-08-28T23:27:38.914Z"}
+{"level":"info","message":"Connecting to eth node http://localhost:7545","timestamp":"2021-08-28T23:27:38.914Z"}
+{"result":{"datasources":{"random":{"sessionPubKeysHash":["0xd937716ea46c0fb8f804f392eb5e00c2667262d1842017eae4f2202943ec1782"]}},"timestamp":1630192304,"deployments":{"ethereum":{"public-kovan":{"addressResolver":"0xB7A07BcF2Ba2f2703b24C0691b5278999C59AC7e"},"public-mainnet":{"addressResolver":"0x1d3B2638a7cC9f2CB3D298A3DA7a90B67E5506ed"},"public-ropsten3":{"addressResolver":"0xc03A2615D5efaf5F49F60B7BB6583eaec212fdf1"},"public-rinkeby":{"addressResolver":"0x146500cfd35B22E4A392Fe0aDc06De1a1368Ed48"}}},"quotes":{"ETH":3.1e-7,"USD":0.001,"BTC":2e-8,"EUR":0.0008475},"pricing":{"proofs":{"0":{"units":0,"description":"None"},"16":{"units":40,"description":"TLSNotary"},"32":{"units":40,"description":"Android-Legacy-Version"},"48":{"units":0,"description":"Ledger"},"64":{"units":40,"description":"Android"}},"datasources":[{"units":10,"byte_alias":"0xfb","proof_types":[0],"name":"IPFS"},{"units":10,"byte_alias":"0xf8","proof_types":[0],"name":"swarm"},{"units":10,"byte_alias":"0xff","proof_types":[0,16,32,64],"name":"URL"},{"units":10,"byte_alias":"0xf9","proof_types":[0],"name":"Blockchain"},{"units":10,"byte_alias":"0xfa","proof_types":[0,16,32,64],"name":"nested"},{"units":30,"byte_alias":"0xfc","proof_types":[0],"name":"WolframAlpha"},{"units":500,"byte_alias":"0xfd","proof_types":[0,16,32,64],"name":"computation"},{"units":50,"byte_alias":"0xfe","proof_types":[0,48],"name":"random"}]},"distributions":{"rootstock-bridge":{"motd":"","latest":{"version":"0.5.4"}},"eris-bridge":{"motd":"","latest":{"version":"0.1.0"}},"blockapps-bridge":{"motd":"","latest":{"version":"0.5.4"}},"ethereum-bridge":{"motd":"","latest":{"version":"0.5.4"}}}},"success":true,"level":"debug","message":"check bridge version body result","timestamp":"2021-08-28T23:27:46.590Z"}
+{"level":"info","message":"connected to node type EthereumJS TestRPC/v2.13.1/ethereum-js","timestamp":"2021-08-28T23:27:46.775Z"}
+{"level":"warn","message":"Using 0xe70bb8e479031970e9546b80d659a5d4d0e9ab75 to query contracts on your blockchain, make sure it is unlocked and do not use the same address to deploy your contracts","timestamp":"2021-08-28T23:27:46.986Z"}
+{"level":"info","message":"deploying the oraclize connector contract...","timestamp":"2021-08-28T23:27:47.040Z"}
+{"level":"info","message":"connector deployed to: 0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","timestamp":"2021-08-28T23:27:57.280Z"}
+{"success":true,"connector":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","level":"debug","message":"connector deployment result","timestamp":"2021-08-28T23:27:57.280Z"}
+{"level":"info","message":"deploying the address resolver with a deterministic address...","timestamp":"2021-08-28T23:27:57.335Z"}
+{"level":"info","message":"address resolver (OAR) deployed to: 0x6f485c8bf6fc43ea212e93bbf8ce046c7f1cb475","timestamp":"2021-08-28T23:28:17.983Z"}
+{"success":true,"oar":"0x6f485c8bf6fc43ea212e93bbf8ce046c7f1cb475","level":"debug","message":"OAR deployment result","timestamp":"2021-08-28T23:28:17.983Z"}
+{"level":"info","message":"updating connector pricing...","timestamp":"2021-08-28T23:28:17.983Z"}
+{"level":"info","message":"successfully deployed all contracts","timestamp":"2021-08-28T23:28:28.815Z"}
+{"success":true,"level":"debug","message":"pricing update result","timestamp":"2021-08-28T23:28:28.815Z"}
+{"context_name":"eth_DD2C70DD63","latest_block_number":-1,"oar":"0x6f485c8bf6fc43ea212e93bbf8ce046c7f1cb475","node":{"main":"http://localhost:7545","backup":[]},"contracts":{"connector":{"binary":"/usr/lib/node_modules/ethereum-bridge/contracts/binary/oraclizeConnector.binary","abi":"/usr/lib/node_modules/ethereum-bridge/contracts/abi/oraclizeConnector.json","source":"/usr/lib/node_modules/ethereum-bridge/contracts/ethereum-api/connectors/oraclizeConnector.sol"},"oar":{"binary":"/usr/lib/node_modules/ethereum-bridge/contracts/binary/addressResolver.binary","abi":"/usr/lib/node_modules/ethereum-bridge/contracts/abi/addressResolver.json","source":"/usr/lib/node_modules/ethereum-bridge/contracts/ethereum-api/connectors/addressResolver.sol"}},"deterministic_oar":true,"deploy_gas":3700000,"account":"0xe70bb8e479031970e9546b80d659a5d4d0e9ab75","mode":"active","key_file":"/usr/lib/node_modules/ethereum-bridge/config/instance/keys.json","gas_price":20000000000,"onchain_config":{"pricing":[{"name":"IPFS","proof":0,"units":10},{"name":"IPFS","proof":1,"units":10},{"name":"swarm","proof":0,"units":10},{"name":"swarm","proof":1,"units":10},{"name":"URL","proof":0,"units":10},{"name":"URL","proof":1,"units":10},{"name":"URL","proof":16,"units":50},{"name":"URL","proof":17,"units":50},{"name":"URL","proof":32,"units":50},{"name":"URL","proof":33,"units":50},{"name":"URL","proof":64,"units":50},{"name":"URL","proof":65,"units":50},{"name":"Blockchain","proof":0,"units":10},{"name":"Blockchain","proof":1,"units":10},{"name":"nested","proof":0,"units":10},{"name":"nested","proof":1,"units":10},{"name":"nested","proof":16,"units":50},{"name":"nested","proof":17,"units":50},{"name":"nested","proof":32,"units":50},{"name":"nested","proof":33,"units":50},{"name":"nested","proof":64,"units":50},{"name":"nested","proof":65,"units":50},{"name":"WolframAlpha","proof":0,"units":30},{"name":"WolframAlpha","proof":1,"units":30},{"name":"computation","proof":0,"units":500},{"name":"computation","proof":1,"units":500},{"name":"computation","proof":16,"units":540},{"name":"computation","proof":17,"units":540},{"name":"computation","proof":32,"units":540},{"name":"computation","proof":33,"units":540},{"name":"computation","proof":64,"units":540},{"name":"computation","proof":65,"units":540},{"name":"random","proof":0,"units":50},{"name":"random","proof":1,"units":50},{"name":"random","proof":48,"units":50},{"name":"random","proof":49,"units":50}],"base_price":3.1e-7},"connector":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","level":"debug","message":"new oracle inline configuration","timestamp":"2021-08-28T23:28:28.815Z"}
+{"level":"info","message":"instance configuration file saved to /usr/lib/node_modules/ethereum-bridge/config/instance/oracle_instance_20210829T022828.json","timestamp":"2021-08-28T23:28:28.823Z"}
+{"level":"debug","message":"starting the bridge log manager...","timestamp":"2021-08-28T23:28:28.823Z"}
+{"level":"debug","message":"latest block seen (config file) -1","timestamp":"2021-08-28T23:28:28.825Z"}
+{"level":"warn","message":"re-org block listen is disabled while using TestRPC","timestamp":"2021-08-28T23:28:28.827Z"}
+{"level":"warn","message":"if you are running a test suit with Truffle and TestRPC or your chain is reset often please use the --dev mode","timestamp":"2021-08-28T23:28:28.827Z"}
+{"level":"info","message":"Listening @ 0xbc417d9a108d8edfb7d14cf1db06656a6bedc445 (Oraclize Connector)\n","timestamp":"2021-08-28T23:28:28.827Z"}
+{"parsed_log":{"contract_address":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","contract_myid":"0x27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","datasource":"URL","formula":"http://c663-217-21-48-69.ngrok.io/index/1","timestamp":0,"gaslimit":16234336,"proofType":"0x00","gasPrice":0},"logIndex":1,"transactionIndex":0,"transactionHash":"0x391b6fd89f63520c71bf068ea4c5a687f74d50c717b3cf5d1a5a9a735cfe7433","blockHash":"0x48f30e2cf43373717fa90edf3d816f76cfbe510b4536ab0965b67dace97a7801","blockNumber":13,"address":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","type":"mined","event":"Log1","args":{"sender":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","cid":"0x27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","timestamp":{"s":1,"e":0,"c":[0]},"datasource":"URL","arg":"http://c663-217-21-48-69.ngrok.io/index/1","gaslimit":{"s":1,"e":7,"c":[16234336]},"proofType":"0x00","gasPrice":{"s":1,"e":0,"c":[0]}},"block_timestamp":1630193596,"level":"debug","message":"manageLog, raw log:","timestamp":"2021-08-28T23:33:17.076Z"}
+{"level":"debug","message":"mangeLog isProcessed: false","timestamp":"2021-08-28T23:33:17.086Z"}
+{"level":"debug","message":"cache content","timestamp":"2021-08-28T23:33:17.086Z"}
+{"level":"debug","message":"cache content after true","timestamp":"2021-08-28T23:33:17.087Z"}
+{"parsed_log":{"contract_address":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","contract_myid":"0x27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","datasource":"URL","formula":"http://c663-217-21-48-69.ngrok.io/index/1","timestamp":0,"gaslimit":16234336,"proofType":"0x00","gasPrice":0},"logIndex":1,"transactionIndex":0,"transactionHash":"0x391b6fd89f63520c71bf068ea4c5a687f74d50c717b3cf5d1a5a9a735cfe7433","blockHash":"0x48f30e2cf43373717fa90edf3d816f76cfbe510b4536ab0965b67dace97a7801","blockNumber":13,"address":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","type":"mined","event":"Log1","args":{"sender":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","cid":"0x27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","timestamp":{"s":1,"e":0,"c":[0]},"datasource":"URL","arg":"http://c663-217-21-48-69.ngrok.io/index/1","gaslimit":{"s":1,"e":7,"c":[16234336]},"proofType":"0x00","gasPrice":{"s":1,"e":0,"c":[0]}},"block_timestamp":1630193596,"level":"info","message":"new Log1 event","timestamp":"2021-08-28T23:33:17.091Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:33:17.231Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:33:18.133Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:33:18.133Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:33:18.134Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:33:18.134Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:33:38.135Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:33:44.920Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:33:44.921Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:33:44.922Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:33:44.924Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:34:04.925Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:34:05.891Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:34:05.892Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:34:05.892Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:34:05.893Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:34:25.893Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:34:26.869Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:34:26.870Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:34:26.870Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:34:26.871Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:34:46.872Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:34:48.761Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:34:48.762Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:34:48.763Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:34:48.763Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:35:08.764Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:35:10.783Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:35:10.784Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:35:10.785Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:35:10.786Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:35:30.787Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:35:32.279Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:35:32.280Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:35:32.281Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:35:32.281Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:35:52.281Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:35:53.267Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:35:53.268Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:35:53.268Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:35:53.268Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:36:13.269Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:36:14.255Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:36:14.256Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:36:14.257Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:36:14.258Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:36:34.259Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:36:35.444Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:36:35.445Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:36:35.445Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:36:35.445Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:36:55.445Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:36:57.472Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:36:57.473Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:36:57.474Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:36:57.474Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:37:17.475Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:37:19.488Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:37:19.489Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:37:19.489Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:37:19.490Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:37:39.490Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:37:41.496Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:37:41.497Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:37:41.497Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:37:41.498Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:38:01.499Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:38:04.538Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:38:04.539Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:38:04.539Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:38:04.540Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:38:24.540Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:38:25.671Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:38:25.672Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:38:25.672Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:38:25.672Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:38:45.672Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:38:46.517Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:38:46.518Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:38:46.519Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:38:46.519Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:39:06.520Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:39:07.502Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:39:07.505Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:39:07.505Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:39:07.506Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:39:27.507Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:39:28.407Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:39:28.408Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:39:28.409Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:39:28.410Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:39:48.410Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:39:49.307Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:39:49.307Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:39:49.308Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:39:49.308Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:40:09.308Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:40:10.190Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:40:10.191Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:40:10.194Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:40:10.194Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:40:30.196Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:40:30.990Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:40:30.990Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:40:30.990Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:40:30.991Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:40:50.992Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:40:51.802Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:40:51.805Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:40:51.806Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:40:51.807Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:41:11.807Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:41:12.758Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:41:12.759Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:41:12.760Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:41:12.761Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:41:32.761Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:41:33.646Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:41:33.647Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:41:33.648Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:41:33.649Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:41:53.650Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:41:55.715Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:41:55.716Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:41:55.716Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:41:55.717Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:42:15.718Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:42:16.693Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:42:16.696Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:42:16.697Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:42:16.698Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:42:36.698Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:42:38.796Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:42:38.796Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:42:38.797Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:42:38.797Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:42:58.798Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:43:00.721Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:43:00.722Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:43:00.722Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:43:00.723Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:43:20.724Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:43:22.841Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:43:22.842Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:43:22.842Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:43:22.843Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:43:42.844Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:43:43.786Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:43:43.787Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:43:43.787Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:43:43.787Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:44:03.787Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:44:04.686Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:44:04.687Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:44:04.687Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:44:04.688Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:44:24.690Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:44:26.816Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:44:26.817Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:44:26.817Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:44:26.818Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:44:46.818Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:44:48.821Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:44:48.822Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:44:48.822Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:44:48.823Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:45:08.824Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:45:10.833Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:45:10.834Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:45:10.835Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:45:10.835Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:45:30.835Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:45:31.728Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:45:31.728Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:45:31.729Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:45:31.730Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:45:51.731Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:45:52.736Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:45:52.737Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:45:52.737Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:45:52.741Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:46:12.742Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:46:13.603Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:46:13.604Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:46:13.604Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:46:13.605Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:46:33.606Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:46:34.495Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:46:34.496Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:46:34.496Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:46:34.497Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:46:54.498Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:46:56.450Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:46:56.452Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:46:56.453Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:46:56.453Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:47:16.454Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:47:17.231Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:47:17.231Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:47:17.231Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:47:17.231Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:47:37.231Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:47:38.213Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:47:38.214Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:47:38.215Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:47:38.215Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:47:58.216Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:47:59.072Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:47:59.073Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:47:59.075Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:47:59.076Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:48:19.077Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:48:21.008Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:48:21.009Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:48:21.009Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:48:21.010Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:48:41.010Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:48:43.086Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:48:43.086Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:48:43.087Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:48:43.087Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:49:03.088Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:49:09.405Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:49:09.406Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:49:09.407Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:49:09.408Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:49:29.409Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:49:30.416Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:49:30.417Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:49:30.418Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:49:30.418Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:49:50.419Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:49:51.506Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:49:51.507Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:49:51.507Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:49:51.508Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:50:11.509Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:50:14.194Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:50:14.195Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:50:14.196Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:50:14.196Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:50:34.196Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:50:34.977Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:50:34.978Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:50:34.978Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:50:34.979Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:50:54.979Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:50:55.806Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:50:55.806Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:50:55.806Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:50:55.806Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:51:15.807Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:51:17.836Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:51:17.837Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:51:17.838Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:51:17.839Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:51:37.839Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:51:38.840Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:51:38.840Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:51:38.840Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:51:38.840Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:51:58.841Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:51:59.645Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:51:59.646Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:51:59.646Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:51:59.647Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:52:19.647Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:52:20.605Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:52:20.606Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:52:20.606Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:52:20.607Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:52:40.609Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:52:41.489Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:52:41.490Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:52:41.491Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:52:41.492Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:53:01.492Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:53:02.387Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:53:02.388Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:53:02.388Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:53:02.389Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:53:22.390Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:53:23.298Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:53:23.299Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:53:23.300Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:53:23.301Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:53:43.303Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:53:44.271Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:53:44.273Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:53:44.273Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:53:44.275Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:54:04.276Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:54:05.283Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:54:05.284Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:54:05.285Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:54:05.286Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:54:25.287Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:54:27.267Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:54:27.268Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:54:27.269Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:54:27.269Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:54:47.271Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:54:48.791Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:54:48.792Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:54:48.793Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:54:48.793Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:55:08.793Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:55:09.830Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:55:09.830Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:55:09.830Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:55:09.831Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:55:29.832Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:55:30.666Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:55:30.669Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:55:30.670Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:55:30.670Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:55:50.671Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:55:52.126Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:55:52.127Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:55:52.128Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:55:52.128Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:56:12.129Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:56:13.008Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:56:13.009Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:56:13.010Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:56:13.011Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:56:33.011Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:56:33.989Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:56:33.990Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:56:33.991Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:56:33.992Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:56:53.993Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:56:57.765Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:56:57.765Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:56:57.765Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:56:57.765Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:57:17.767Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:57:18.693Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:57:18.694Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:57:18.694Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:57:18.695Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:57:38.697Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:57:39.571Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:57:39.572Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:57:39.573Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:57:39.573Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:57:59.574Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:58:00.480Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:58:00.480Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:58:00.480Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:58:00.480Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:58:20.480Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:58:22.483Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:58:22.484Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:58:22.484Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:58:22.485Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:58:42.486Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:58:43.977Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:58:43.978Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:58:43.979Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:58:43.979Z"}
+{"parsed_log":{"contract_address":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","contract_myid":"0x988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","datasource":"URL","formula":"http://c663-217-21-48-69.ngrok.io/index/1","timestamp":0,"gaslimit":16234336,"proofType":"0x00","gasPrice":0},"logIndex":1,"transactionIndex":0,"transactionHash":"0x6d2e216e09ca53fd6d67aad02ba33f9dfda09c196832d2223798aa8dccea169a","blockHash":"0x15ee5fa454502885270d0f60c9aab5eebf95f9744e9902a2c8652ff05ed92f74","blockNumber":14,"address":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","type":"mined","event":"Log1","args":{"sender":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","cid":"0x988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","timestamp":{"s":1,"e":0,"c":[0]},"datasource":"URL","arg":"http://c663-217-21-48-69.ngrok.io/index/1","gaslimit":{"s":1,"e":7,"c":[16234336]},"proofType":"0x00","gasPrice":{"s":1,"e":0,"c":[0]}},"block_timestamp":1630195138,"level":"debug","message":"manageLog, raw log:","timestamp":"2021-08-28T23:58:59.124Z"}
+{"level":"debug","message":"mangeLog isProcessed: false","timestamp":"2021-08-28T23:58:59.127Z"}
+{"level":"debug","message":"cache content","timestamp":"2021-08-28T23:58:59.127Z"}
+{"level":"debug","message":"cache content after true","timestamp":"2021-08-28T23:58:59.127Z"}
+{"parsed_log":{"contract_address":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","contract_myid":"0x988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","datasource":"URL","formula":"http://c663-217-21-48-69.ngrok.io/index/1","timestamp":0,"gaslimit":16234336,"proofType":"0x00","gasPrice":0},"logIndex":1,"transactionIndex":0,"transactionHash":"0x6d2e216e09ca53fd6d67aad02ba33f9dfda09c196832d2223798aa8dccea169a","blockHash":"0x15ee5fa454502885270d0f60c9aab5eebf95f9744e9902a2c8652ff05ed92f74","blockNumber":14,"address":"0xbc417d9a108d8edfb7d14cf1db06656a6bedc445","type":"mined","event":"Log1","args":{"sender":"0x0dbe5d6c4eac7c88842b7d0bc6d392395fab3ff8","cid":"0x988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","timestamp":{"s":1,"e":0,"c":[0]},"datasource":"URL","arg":"http://c663-217-21-48-69.ngrok.io/index/1","gaslimit":{"s":1,"e":7,"c":[16234336]},"proofType":"0x00","gasPrice":{"s":1,"e":0,"c":[0]}},"block_timestamp":1630195138,"level":"info","message":"new Log1 event","timestamp":"2021-08-28T23:58:59.128Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:58:59.183Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:01.309Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:01.310Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:01.310Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:01.311Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:59:03.979Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:04.895Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:04.896Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:04.896Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:04.896Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:59:21.312Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:22.280Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:22.280Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:22.281Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:22.281Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:59:24.897Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:25.899Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:25.899Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:25.900Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:25.900Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:59:42.282Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-28T23:59:45.901Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:48.187Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:48.188Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:48.188Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:48.189Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-28T23:59:48.198Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-28T23:59:48.199Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-28T23:59:48.199Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-28T23:59:48.199Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:08.191Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:08.199Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:09.085Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:09.086Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:09.086Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:09.087Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:09.100Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:09.100Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:09.100Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:09.100Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:29.088Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:29.101Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:29.971Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:29.972Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:29.972Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:29.973Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:29.989Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:29.990Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:29.990Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:29.991Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:49.974Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:00:49.991Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:50.827Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:50.828Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:50.828Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:50.829Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:00:50.839Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:00:50.840Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:00:50.840Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:00:50.841Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:10.829Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:10.841Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:11.762Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:11.763Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:11.763Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:11.764Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:11.769Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:11.770Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:11.771Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:11.771Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:31.765Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:31.771Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:32.855Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:32.855Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:32.856Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:32.856Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:33.662Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:33.663Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:33.664Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:33.664Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:52.857Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:01:53.664Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:53.891Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:53.892Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:53.894Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:53.894Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:01:55.286Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:01:55.287Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:01:55.288Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:01:55.288Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:13.895Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:15.042Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:15.043Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:15.043Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:15.043Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:15.289Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:16.152Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:16.152Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:16.153Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:16.153Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:35.043Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:36.050Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:36.051Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:36.052Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:36.052Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:36.153Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:37.078Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:37.079Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:37.080Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:37.080Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"27233ba44f6798c08dc0aa759a2f15221cf329153568fbe63013811a8da89fc7","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630193596},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:56.053Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:56.873Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:56.874Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:56.874Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:56.874Z"}
+{"when":0,"datasource":"URL","query":"http://c663-217-21-48-69.ngrok.io/index/1","id2":"988377a9653574f43187e9d0ce8d9096fec0ad7186ecb9e0bb0e2ceabaed89ad","proof_type":0,"context":{"name":"eth_DD2C70DD63","protocol":"eth","type":"blockchain","relative_timestamp":1630195138},"level":"debug","message":"HTTP create query content","timestamp":"2021-08-29T00:02:57.082Z"}
+{"level":"debug","message":"oraclize HTTP create query body response","timestamp":"2021-08-29T00:02:57.966Z"}
+{"fatal":false,"level":"error","message":"HTTP query create request error ","timestamp":"2021-08-29T00:02:57.966Z"}
+{"fatal":false,"level":"error","message":"Kostia krutoj","timestamp":"2021-08-29T00:02:57.966Z"}
+{"level":"info","message":"re-trying to create the query again in 20 seconds...","timestamp":"2021-08-29T00:02:57.966Z"}
